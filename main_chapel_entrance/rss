@@ -1,67 +1,34 @@
-<?php
-header('Content-Type: application/rss+xml; charset=utf-8');
-
-// Get current day of week (0=Sunday, 1=Monday, etc.)
-$dayOfWeek = date('w');
-
-// Generate content based on day
-if ($dayOfWeek == 0) {
-    // Sunday - Show only bible verses
-    $imageContent = '<p><img src="bible%20verses_9-2_final.png" alt="Sunday Bible Verses" style="" /></p>';
-} else {
-    // Monday through Saturday - Show all other images
-    $imageContent = '
-        <p><img src="1main.png" alt="1main" style="" /></p>
-        <p><img src="1verse_01.png" alt="1verse_01" style="" /></p>
-        <p><img src="1verse_02.png" alt="1verse_02" style="" /></p>
-        <p><img src="2main.png" alt="2main" style="" /></p>
-        <p><img src="2verse_01.png" alt="2verse_01" style="" /></p>
-        <p><img src="2verse_02.png" alt="2verse_02" style="" /></p>
-        <p><img src="3main.png" alt="3main" style="" /></p>
-        <p><img src="3verse_01.png" alt="3verse_01" style="" /></p>
-        <p><img src="3verse_02.png" alt="3verse_02" style="" /></p>
-        <p><img src="4main.png" alt="4main" style="" /></p>
-        <p><img src="4verse_01.png" alt="4verse_01" style="" /></p>
-        <p><img src="4verse_02.png" alt="4verse_02" style="" /></p>
-        <p><img src="5main.png" alt="5main" style="" /></p>
-        <p><img src="5verse_01.png" alt="5verse_01" style="" /></p>
-        <p><img src="5verse_02.png" alt="5verse_02" style="" /></p>
-        <p><img src="6main.png" alt="6main" style="" /></p>
-        <p><img src="6verse_01.png" alt="6verse_01" style="" /></p>
-        <p><img src="6verse_02.png" alt="6verse_02" style="" /></p>
-        <p><img src="7main.png" alt="7main" style="" /></p>
-        <p><img src="7verse_01.png" alt="7verse_01" style="" /></p>
-        <p><img src="7verse_02.png" alt="7verse_02" style="" /></p>
-        <p><img src="8main.png" alt="8main" style="" /></p>
-        <p><img src="8verse_01.png" alt="8verse_01" style="" /></p>
-        <p><img src="8verse_02.png" alt="8verse_02" style="" /></p>';
-}
-
-$currentDate = date('r'); // RFC 2822 format
-
-echo '<?xml version="1.0" encoding="UTF-8"?>';
-?>
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" version="2.0">
   <channel>
-    <title><![CDATA[ 본당 광고 ]]></title>
+    <title>
+      <![CDATA[ 본당 광고 ]]>
+    </title>
     <link>https://www.saenurifamily.com/v2/main_chapel_annoucement</link>
-    <description><![CDATA[ ]]></description>
+    <description>
+      <![CDATA[ ]]>
+    </description>
     <language>ko</language>
-    <pubDate><?php echo $currentDate; ?></pubDate>
-    <lastBuildDate><?php echo $currentDate; ?></lastBuildDate>
+    <pubDate>Fri, 02 Apr 2021 22:34:57 -0800</pubDate>
+    <lastBuildDate>Fri, 02 Apr 2021 22:34:57 -0800</lastBuildDate>
     <generator>XpressEngine</generator>
     <item>
-      <title><![CDATA[ update_<?php echo date('m_d'); ?> ]]></title>
-      <dc:creator><![CDATA[ 서아름 ]]></dc:creator>
+      <title>
+        <![CDATA[ update_01_22 ]]>
+      </title>
+      <dc:creator>
+        <![CDATA[ 서아름 ]]>
+      </dc:creator>
       <link>https://www.saenurifamily.com/v2/192327</link>
       <guid isPermaLink="true">https://www.saenurifamily.com/v2/192327</guid>
       <comments>https://www.saenurifamily.com/v2/192327#comment</comments>
-      <description><![CDATA[
-        <div class="xe_content">
-          <?php echo $imageContent; ?>
-        </div>
-      ]]></description>
-      <pubDate><?php echo $currentDate; ?></pubDate>
+      <description>
+        <![CDATA[ 
+            <div class="xe_content">
+ <p><img src="bible%20verses_9-2_final.png" alt="welcome screen1-01.png" style="" /></p>
+            </div>
+        ]]>
+      </description>
+      <pubDate>Sat, 20 January 2025 00:00:00 -0800</pubDate>
     </item>
   </channel>
 </rss>
