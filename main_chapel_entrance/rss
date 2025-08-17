@@ -59,35 +59,6 @@
                   document.write('<p><img src="8verse_02.png" alt="8verse_02" style="" /></p>');
                 }
               </script>
-              <noscript>
-                <!-- Fallback for RSS readers that don't support JavaScript -->
-                <!-- Shows all images if JavaScript is disabled -->
-                <p><img src="1main.png" alt="1main" style="" /></p>
-                <p><img src="1verse_01.png" alt="1verse_01" style="" /></p>
-                <p><img src="1verse_02.png" alt="1verse_02" style="" /></p>
-                <p><img src="2main.png" alt="2main" style="" /></p>
-                <p><img src="2verse_01.png" alt="2verse_01" style="" /></p>
-                <p><img src="2verse_02.png" alt="2verse_02" style="" /></p>
-                <p><img src="3main.png" alt="3main" style="" /></p>
-                <p><img src="3verse_01.png" alt="3verse_01" style="" /></p>
-                <p><img src="3verse_02.png" alt="3verse_02" style="" /></p>
-                <p><img src="4main.png" alt="4main" style="" /></p>
-                <p><img src="4verse_01.png" alt="4verse_01" style="" /></p>
-                <p><img src="4verse_02.png" alt="4verse_02" style="" /></p>
-                <p><img src="5main.png" alt="5main" style="" /></p>
-                <p><img src="5verse_01.png" alt="5verse_01" style="" /></p>
-                <p><img src="5verse_02.png" alt="5verse_02" style="" /></p>
-                <p><img src="6main.png" alt="6main" style="" /></p>
-                <p><img src="6verse_01.png" alt="6verse_01" style="" /></p>
-                <p><img src="6verse_02.png" alt="6verse_02" style="" /></p>
-                <p><img src="7main.png" alt="7main" style="" /></p>
-                <p><img src="7verse_01.png" alt="7verse_01" style="" /></p>
-                <p><img src="7verse_02.png" alt="7verse_02" style="" /></p>
-                <p><img src="8main.png" alt="8main" style="" /></p>
-                <p><img src="8verse_01.png" alt="8verse_01" style="" /></p>
-                <p><img src="8verse_02.png" alt="8verse_02" style="" /></p>
-                <p><img src="bible%20verses_9-2_final.png" alt="Sunday Bible Verses" style="" /></p>
-              </noscript>
             </div>
         ]]>
       </description>
