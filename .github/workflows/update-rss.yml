@@ -19,16 +19,16 @@ jobs:
         
         if [ $DAY -eq 0 ]; then
           # Sunday - copy sunday RSS
-          cp rss-sunday.xml rss
+          cp main_chapel_entrance/rss-sunday.xml main_chapel_entrance/rss
         else
           # Monday-Saturday - copy weekday RSS
-          cp rss-weekday.xml rss
+          cp main_chapel_entrance/rss-weekday.xml main_chapel_entrance/rss
         fi
         
     - name: Commit changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add rss
+        git add main_chapel_entrance/rss
         git diff --staged --quiet || git commit -m "Auto-update RSS feed for $(date +%A)"
         git push
