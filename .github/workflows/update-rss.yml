@@ -1,0 +1,34 @@
+name: Update RSS Feed
+on:
+  schedule:
+    # Run daily at 6 AM UTC (adjust for your timezone)
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-rss:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Update RSS based on day of week
+      run: |
+        # Get day of week (0=Sunday, 1=Monday, etc.)
+        DAY=$(date +%w)
+        
+        if [ $DAY -eq 0 ]; then
+          # Sunday - copy sunday RSS
+          cp rss-sunday.xml rss
+        else
+          # Monday-Saturday - copy weekday RSS
+          cp rss-weekday.xml rss
+        fi
+        
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add rss
+        git diff --staged --quiet || git commit -m "Auto-update RSS feed for $(date +%A)"
+        git push
