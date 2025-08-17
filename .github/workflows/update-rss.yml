@@ -2,7 +2,7 @@ name: Update RSS Feed
 on:
   schedule:
     # Run daily at 6 AM UTC (adjust for your timezone)
-    - cron: '0 6 * * *'
+    - cron: '18 1 * * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
