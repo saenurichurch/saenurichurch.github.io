@@ -19,10 +19,10 @@ jobs:
         
         if [ $DAY -eq 0 ]; then
           # Sunday - copy sunday RSS
-          cp main_chapel_entrance/rss-sunday.xml main_chapel_entrance/rss
+          cp main_chapel_entrance/rss-weekday.xml main_chapel_entrance/rss
         else
           # Monday-Saturday - copy weekday RSS
-          cp main_chapel_entrance/rss-weekday.xml main_chapel_entrance/rss
+          cp main_chapel_entrance/rss-sunday.xml main_chapel_entrance/rss
         fi
         
     - name: Commit changes
