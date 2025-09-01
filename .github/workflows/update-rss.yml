@@ -1,8 +1,8 @@
 name: Update RSS Feed
 on:
   schedule:
-    # Run daily at 6 AM UTC (adjust for your timezone)
-    - cron: '0 23 * * *'
+    # Run daily at 9 PM UTC (adjust for your timezone)
+    - cron: '0 18 * * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
         # Get day of week (0=Sunday, 1=Monday, etc.)
         DAY=$(date +%w)
         
-        if [ $DAY -eq 0 ]; then
+        if [ $DAY -eq 6 ]; then
           # Sunday - copy sunday RSS
           cp main_chapel_entrance/rss-sunday.xml main_chapel_entrance/rss
         else
