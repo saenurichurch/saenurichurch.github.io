@@ -1,5 +1,3 @@
-본당 입구 TV (Weekday and Saturday)
-
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" version="2.0">
   <channel>
     <title>
@@ -26,7 +24,6 @@
       <description>
         <![CDATA[ 
             <div class="xe_content">
- <p><img src="milal.png" alt="welcome screen1-01.png" style="" /></p>
  <p><img src="welcome_message.png" alt="welcome screen1-01.png" style="" /></p>
             </div>
         ]]>
