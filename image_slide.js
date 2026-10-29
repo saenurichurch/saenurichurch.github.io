@@ -89,7 +89,31 @@ class RSSImageSlideShow {
 
     this.slideIndex = this.pictures.length - 1;
 
-    this.startSlideShow();
+    // Wait until every image has downloaded so no slide shows up blank.
+    // Start anyway after 2 minutes in case an image never finishes.
+    var self = this;
+    var started = false;
+    var start = function() {
+      if (!started && self.pictures === pictures) {
+        started = true;
+        self.startSlideShow();
+      }
+    };
+    var images = slideContainer.getElementsByTagName('img');
+    var remaining = images.length;
+    var onDone = function() {
+      if (--remaining <= 0) start();
+    };
+    if (remaining == 0) start();
+    for (var i = 0; i < images.length; ++i) {
+      if (images[i].complete) {
+        onDone();
+      } else {
+        images[i].onload = onDone;
+        images[i].onerror = onDone;
+      }
+    }
+    setTimeout(start, 120000);
   }
 
   addClass(elem, name) {
