@@ -3,6 +3,7 @@ body {
   font-family: Verdana, sans-serif;
   margin: 0px;
   overflow: hidden;
+  background: black;
 }
 .mySlides {display: none;}
 img {vertical-align: middle;}
@@ -21,10 +22,10 @@ img {vertical-align: middle;}
   position: absolute;
   top: 0;
   left: 0;
-  /* Fit the whole image on screen, whatever the screen size. */
+  /* Fill the whole screen. This TV shows 1024x768 and stretches it to widescreen. */
   width: 100vw !important;
   height: 100vh;
-  object-fit: contain;
+  object-fit: fill;
   background: black;
   -webkit-transition: opacity 1s linear;
   -moz-transition: opacity 1s linear;
