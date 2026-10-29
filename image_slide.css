@@ -18,9 +18,14 @@ img {vertical-align: middle;}
 .slide {
   border: none; 
   opacity: 0; 
-  position: absolute; 
-  top: 0; 
+  position: absolute;
+  top: 0;
   left: 0;
+  /* Fit the whole image on screen, whatever the screen size. */
+  width: 100vw !important;
+  height: 100vh;
+  object-fit: contain;
+  background: black;
   -webkit-transition: opacity 1s linear;
   -moz-transition: opacity 1s linear;
   -o-transition: opacity 1s linear;
